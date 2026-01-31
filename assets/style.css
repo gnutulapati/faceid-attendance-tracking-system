@@ -73,12 +73,21 @@ div.stButton > button:first-child:hover {
 }
 
 /* Camera Input Styling */
-div[data-testid="stCameraInput"] {
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    background-color: white;
-    padding: 5px; 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+/* --- CAMERA BUTTON STYLING --- */
+
+/* 1. RESTING STATE: Pure White with Black Text */
+div[data-testid="stCameraInput"] button {
+    background-color: #ffffff !important;
+    color: #000000 !important; /* Black text so it is clearly visible */
+    border: 1px solid #cccccc !important;
+    font-weight: 600 !important;
+}
+
+/* 2. HOVER STATE: Aggressive Red (Streamlit Default) */
+div[data-testid="stCameraInput"] button:hover {
+    background-color: #FF4B4B !important; /* The Aggressive Red */
+    color: white !important;
+    border-color: #FF4B4B !important;
 }
 
 /* Status Badge */
