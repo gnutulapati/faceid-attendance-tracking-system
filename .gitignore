@@ -1,0 +1,12 @@
+# Virtual Environment
+venv/
+env/
+.env
+
+# Python Compiled files
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,93 @@
+/* --- GLOBAL THEME --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* --- FORCE LIGHT MODE --- */
+[data-testid="stAppViewContainer"] {
+    background-color: #f0fff0;
+}
+
+/* --- LAYOUT FIXES (User Requested) --- */
+/* 1. Reduce Top Padding drastically to save space */
+.block-container {
+    padding-top: 1.5rem !important; /* Was ~6rem by default */
+    padding-bottom: 1rem !important;
+}
+
+/* 2. Remove the "Black Header Line" (Decoration) & Background */
+[data-testid="stDecoration"] {
+    display: none;
+}
+header[data-testid="stHeader"] {
+    background-color: transparent;
+    /* We keep the header visible so the sidebar toggle (☰) works, 
+       but we make it transparent so it looks like it's gone. */
+}
+
+/* --- SIDEBAR STYLING --- */
+section[data-testid="stSidebar"] {
+    background-color: #e0f2f1;
+    border-right: 1px solid #e9ecef;
+}
+
+/* Ensure Navigation Toggle is Visible */
+button[kind="header"] {
+    background-color: transparent !important;
+    color: #343a40 !important;
+}
+div[data-testid="collapsedControl"] {
+    color: #343a40 !important;
+}
+
+/* --- TEXT VISIBILITY --- */
+h1, h2, h3, h4, span, p, div, label {
+    color: #212529 !important;
+}
+
+[data-testid="stSidebar"] .stMarkdown p, 
+[data-testid="stSidebar"] .stRadio label {
+    color: #343a40 !important;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* --- UI COMPONENTS --- */
+#MainMenu {visibility: hidden;} 
+footer {visibility: hidden;}
+
+/* Medoc Teal Buttons */
+div.stButton > button:first-child {
+    background-color: #17a2b8 !important;
+    color: white !important;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+}
+
+div.stButton > button:first-child:hover {
+    background-color: #138496 !important;
+    transform: translateY(-1px);
+}
+
+/* Camera Input Styling */
+div[data-testid="stCameraInput"] {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: white;
+    padding: 5px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Status Badge */
+.status-badge {
+    background-color: #d1ecf1;
+    color: #0c5460 !important;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #bee5eb;
+}
